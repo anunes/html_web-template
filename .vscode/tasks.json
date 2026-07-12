@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Serve site locally",
+			"type": "shell",
+			"command": "npx --yes serve .",
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

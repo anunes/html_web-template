@@ -1,0 +1,33 @@
+/*
+ * ╔═══════════════════════════════════════════════════════════════╗
+ * ║                        style.css                             ║
+ * ║                                                               ║
+ * ║  This is YOUR stylesheet. Add all your custom styles here.   ║
+ * ║  It loads after app.css, so anything you write here will     ║
+ * ║  override the template defaults.                             ║
+ * ║                                                               ║
+ * ║  Available CSS variables (defined in app.css):               ║
+ * ║    --accent-color   default #006aff  (links, active, buttons)║
+ * ║    --nav-height     default 56px     (top navbar height)     ║
+ * ║    --nav-bg         default #f8f9fa  (navbar background)     ║
+ * ║    --nav-border     default #e0e0e0  (border / divider color)║
+ * ║    --footer-height  default 36px     (bottom bar height)     ║
+ * ║    --text-muted     default #666     (secondary text)        ║
+ * ║    --radius         default 8px      (border radius)         ║
+ * ╚═══════════════════════════════════════════════════════════════╝
+ */
+
+/* Example: change the accent colour
+:root {
+    --accent-color: #e63946;
+}
+*/
+
+/* Example: dark background on all sections
+.section {
+    background: #0f1016;
+    color: #f0f0f0;
+}
+*/
+
+/* Add your styles below ↓ */

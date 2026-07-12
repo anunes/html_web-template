@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SiteKit</title>
+        <link rel="stylesheet" href="engine/css/app.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+
+        <app-navbar></app-navbar>
+
+        <main class="main-container">
+
+            <!-- ── HOME ──────────────────────────────────────────── -->
+            <app-page page-id="home" title="Welcome to SiteKit">
+                <p class="lead">
+                    A clean, lightweight website template built with vanilla HTML, CSS, and
+                    native Web Components — no frameworks, no build tools, no fuss.
+                </p>
+
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>⚡ Zero dependencies</h3>
+                        <p>No npm, no bundler, no framework. Open <code>index.html</code> in a browser and it just works.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🧩 Component-based</h3>
+                        <p>Every piece of the UI is a reusable Web Component. Swap, extend, or create your own.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎨 Easy to customise</h3>
+                        <p>One config file controls all text and links. One CSS file is yours to style freely.</p>
+                    </div>
+                    <div class="card">
+                        <h3>📱 Responsive</h3>
+                        <p>Mobile-first navigation with a smooth hamburger menu and flicker-free scroll.</p>
+                    </div>
+                </div>
+
+                <a class="btn" href="instructions.html">Read the instructions →</a>
+            </app-page>
+
+            <!-- ── ABOUT (example page) ──────────────────────────── -->
+            <app-page page-id="about" title="About">
+                <p class="lead">
+                    This is an example content page — a great place to introduce yourself,
+                    your business, or your project.
+                </p>
+                <p>
+                    You can put anything here: text, images, cards, forms, videos.
+                    Style it in <code>style.css</code> using regular CSS.
+                    The template handles the navbar, footer, smooth scrolling, and
+                    active link highlighting automatically.
+                </p>
+                <div class="tip">
+                    <strong>This is an example page.</strong> Replace this content with your own story.
+                    Edit the title by changing the <code>title</code> attribute on the
+                    <code>&lt;app-page&gt;</code> element in <code>index.html</code>.
+                </div>
+            </app-page>
+
+            <!-- ── CONTACT (example page) ────────────────────────── -->
+            <app-page page-id="contact" title="Contact">
+                <p class="lead">
+                    This is another example page showing how a contact section might look.
+                </p>
+                <p>
+                    You could place a contact form, an email address, social links,
+                    or a map embed here. The layout is entirely up to you —
+                    just drop your HTML inside the <code>&lt;app-page&gt;</code> tags.
+                </p>
+                <div class="card-grid" style="max-width:520px">
+                    <div class="card">
+                        <h3>✉️ Email</h3>
+                        <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+                    </div>
+                    <div class="card">
+                        <h3>🌍 Web</h3>
+                        <p><a href="https://example.com" target="_blank" rel="noopener">example.com</a></p>
+                    </div>
+                </div>
+                <div class="tip">
+                    <strong>This is an example page.</strong> Replace it with your real contact details or a form.
+                </div>
+            </app-page>
+
+        </main>
+
+        <app-footer></app-footer>
+
+        <script type="module" src="engine/js/app.js"></script>
+    </body>
+</html>
+
+

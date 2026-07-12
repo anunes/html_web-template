@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SiteKit | Instructions</title>
+        <link rel="stylesheet" href="engine/css/app.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+
+        <app-navbar base="index.html"></app-navbar>
+
+        <main class="main-container">
+
+            <app-page page-id="instructions" title="How to Build Your Website">
+                <p class="lead">
+                    Everything you need to know to go from this template to a live website.
+                    No coding experience required for the basics.
+                </p>
+
+                <hr class="section-divider">
+                <h3>Project Structure</h3>
+                <p>Here is every file in the project and what it does:</p>
+                <div class="file-tree">
+index.html              <span class="user">← your pages live here ✏️</span><br>
+assets/<br>
+&nbsp;&nbsp;css/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="user">style.css</span>       <span class="user">← YOUR custom styles go here ✏️</span><br>
+&nbsp;&nbsp;js/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="user">config.js</span>       <span class="user">← change ALL text &amp; links here ✏️</span><br>
+&nbsp;&nbsp;img/            <span class="user">← drop your images here ✏️</span><br>
+engine/                 <span class="note">← do not edit anything in here</span><br>
+&nbsp;&nbsp;css/app.css     <span class="note">← template styles</span><br>
+&nbsp;&nbsp;js/app.js       <span class="note">← template logic</span><br>
+&nbsp;&nbsp;js/components/  <span class="note">← building blocks</span>
+                </div>
+
+                <div class="tip">
+                    <strong>Golden rule:</strong> The only files you ever need to edit are
+                    <code>index.html</code>, <code>assets/js/config.js</code>, and <code>assets/css/style.css</code>.
+                    Everything inside <code>engine/</code> runs the template — leave it alone.
+                </div>
+
+                <hr class="section-divider">
+                <h3>Step-by-step Guide</h3>
+
+                <ol class="steps">
+                    <li>
+                        <h3>Change the site name</h3>
+                        <p>Open <code>assets/js/config.js</code> and update the <code>brand</code> value:</p>
+<pre><code>navbar: {
+  brand: 'My Awesome Site',   // ← change this
+  ...</code></pre>
+                        <p>This updates the logo text in the top-left of the navbar instantly.</p>
+                    </li>
+
+                    <li>
+                        <h3>Edit navigation links</h3>
+                        <p>Still in <code>config.js</code>, update the <code>links</code> array.
+                        Each item needs a <code>label</code> (what the user sees) and an <code>href</code>
+                        (where it scrolls to — must match the <code>page-id</code> of your page).</p>
+<pre><code>links: [
+  { label: 'Home',      href: '#home'      },
+  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Contact',   href: '#contact'   },
+],</code></pre>
+                    </li>
+
+                    <li>
+                        <h3>Edit or remove the dropdown menu</h3>
+                        <p>The <code>dropdown</code> section in <code>config.js</code> controls the Services menu.
+                        Change labels and links, add a <code>{ divider: true }</code> item for a separator,
+                        or set <code>dropdown: null</code> to remove it entirely.</p>
+<pre><code>dropdown: {
+  label: 'Products',
+  items: [
+    { label: 'App',     href: '#app'     },
+    { label: 'Plugin',  href: '#plugin'  },
+    { divider: true },
+    { label: 'Pricing', href: '#pricing' },
+  ],
+},</code></pre>
+                    </li>
+
+                    <li>
+                        <h3>Update the footer</h3>
+                        <p>At the bottom of <code>config.js</code>, update the <code>footer</code> block.
+                        Change <code>yearStart</code> to the year your project began, and <code>domain</code>
+                        to your website domain. Set <code>domain: ''</code> to hide it.</p>
+<pre><code>footer: {
+  yearStart: 2024,
+  domain:    'mysite.com',
+},</code></pre>
+                    </li>
+
+                    <li>
+                        <h3>Add a new page</h3>
+                        <p><strong>1.</strong> Add a nav link in <code>config.js</code>:</p>
+<pre><code>{ label: 'Portfolio', href: '#portfolio' }</code></pre>
+                        <p><strong>2.</strong> Add an <code>&lt;app-page&gt;</code> element inside
+                        <code>&lt;main class="main-container"&gt;</code> in <code>index.html</code>:</p>
+<pre><code>&lt;app-page page-id="portfolio" title="My Portfolio"&gt;
+  &lt;p&gt;Your content goes here.&lt;/p&gt;
+&lt;/app-page&gt;</code></pre>
+                        <div class="tip">
+                            <strong>Important:</strong> The <code>page-id</code> must exactly match the
+                            <code>#id</code> used in the nav link <code>href</code> (without the <code>#</code>).
+                        </div>
+                    </li>
+
+                    <li>
+                        <h3>Style your site</h3>
+                        <p>Open <code>assets/css/style.css</code> — this is your blank canvas.
+                        Use standard CSS. To quickly change colours, override a CSS variable:</p>
+<pre><code>:root {
+  --accent-color: #e63946;  /* links, buttons, active nav */
+  --nav-bg:       #ffffff;  /* navbar background          */
+}</code></pre>
+                        <p>All available variables are listed as comments at the top of <code>style.css</code>.</p>
+                    </li>
+
+                    <li>
+                        <h3>Deploy your site</h3>
+                        <p>No build step needed — host it anywhere for free:</p>
+                        <ul>
+                            <li><strong>GitHub Pages</strong> — push to a repo, enable Pages in Settings.</li>
+                            <li><strong>Netlify</strong> — drag and drop your project folder on netlify.com.</li>
+                            <li><strong>Vercel</strong> — connect your GitHub repo on vercel.com.</li>
+                        </ul>
+                        <div class="tip">
+                            <strong>Note:</strong> ES modules require the page to be served over HTTP —
+                            not opened as a local file. Run <code>npx serve .</code> in your project folder
+                            to test locally before deploying.
+                        </div>
+                    </li>
+                </ol>
+
+                <hr class="section-divider">
+                <a class="btn btn-outline" href="index.html">← Back to site</a>
+            </app-page>
+
+        </main>
+
+        <app-footer></app-footer>
+
+        <script type="module" src="engine/js/app.js"></script>
+    </body>
+</html>
